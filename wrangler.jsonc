@@ -1,8 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "be-webtech-2",
+  "name": "hono-api",
   "main": "src/index.ts",
-  "compatibility_date": "2026-01-21"
+  "compatibility_date": "2026-01-14"
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],

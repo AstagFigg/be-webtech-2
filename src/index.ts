@@ -1,9 +1,14 @@
 import { Hono } from 'hono'
+import { serve } from '@hono/node-server'
+import studentsRoute from './students/students.route.js'
 
 const app = new Hono()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.route('/students', studentsRoute)
 
-export default app
+// Start the server
+serve({
+  fetch: app.fetch,
+  port: 3000
+})
+console.log('Server running at http://localhost:3000')
